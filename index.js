@@ -31,6 +31,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //Register basic routes
 // Comment this when we work on the zomato API
+
+const nasaRoutes = require('./routes/nasa.routes');
+app.use('/', nasaRoutes)
+
 const bb = require('./routes/bb.routes');
 app.use('/', bb);
 
